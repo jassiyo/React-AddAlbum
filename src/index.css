@@ -1,0 +1,175 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input, button {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar styles */
+.navbar {
+  width: 100%;
+  padding: 15px 10%;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h2 {
+  color: #FD0102;
+  font-size: 24px;
+}
+
+.brand-first-half {
+  margin-right: 4px;
+}
+
+.brand-last-half {
+  color: #FD0102;
+}
+
+.navbar button {
+  background-color: transparent;
+  color: #FD0102;
+  border: 2px solid #FD0102;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #FD0102;
+  color: #fff;
+}
+
+/* AlbumsList styles */
+.albums-list {
+  width: 80%;
+  margin-top: 80px; /* Adjusted for fixed navbar */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* List styles */
+.list {
+  background-color: #073A6D;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.list:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.list h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-btn, .delete-btn {
+  flex-basis: 48%;
+  border-radius: 4px;
+}
+
+.update-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: #46a049;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d73829;
+}
+
+/* UpdateAlbum styles */
+.update-album, .addalbum-container {
+  width: 400px;
+  margin-top: 80px; /* Adjusted for fixed navbar */
+  color: white;
+}
+
+.form-container, .addalbum-form {
+  background-color: #478AC9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.inp-container {
+  margin-bottom: 15px;
+}
+
+.form-container button, .addalbum-form button {
+  background-color: #4CAF50;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-container button:hover, .addalbum-form button:hover {
+  background-color: #46a049;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .albums-list {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .update-album, .addalbum-container {
+    width: 90%;
+  }
+}
